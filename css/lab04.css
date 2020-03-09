@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
+
+
+main {
+    font-family: "Playfair Display", serif;
+}
+
+header,
+footer {
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    font-size: 1.5rem;
+}
+
+nav {
+    box-sizing: border-box;
+    height: 100px;
+    width: 960px;
+    border: solid 5px #78b7ff;
+    opacity: 0.8;
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#home {
+    flex: auto;
+    justify-content: flex-start;
+}
+
+#about-me {
+    padding-right: 10px;
+}
+
+a:link {
+    text-decoration: none;
+    color: #ff8a78;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #ff8a78;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #78b7ff;
+    text-decoration-color: #78b7ff;
+}
+
+
+
+
+#labs-grid {
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+}
+
+
+
+#page_title {
+    grid-column: 1 / 4;
+}
+
+
+.lab_item {
+    background-color: #fff9e5;
+    /*max-height: 300px; Use this versus row of 4fr?*/
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-areas:
+        "image number"
+        "image title"
+        "image description";
+}
+
+.lab_image {
+    grid-area: image;
+    margin-right: 5px;
+}
+
+.lab_number {
+    grid-area: number;
+    margin-top: 3px;
+    margin-bottom: auto;
+}
+
+.lab_title {
+    color: black;
+    grid-area: title;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.lab_description {
+    grid-area: description;
+    margin-top: 2px;
+    margin-bottom: auto;
+    margin-right: 3px;
+}
+
+
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    border: solid 5px #78b7ff;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+#footer-items {
+    list-style-type: none;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+}

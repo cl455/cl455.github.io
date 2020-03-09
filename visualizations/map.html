@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizing Spaces of Confinement</title>
+    <link href="../css/final.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/final.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+</head>
+
+<body>
+     <header>
+         <div class="container">
+            <a href="../index.html"><img src="../images/top_banner.jpg" alt="screenshot of 3d krakow model" width=100%></a>
+            <div class="centered">Mapping and Visualizing Testimonies of Spaces of Confinement: <br>A Digital Analysis of the Kraków Ghetto</div>
+        </div>
+        <div class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="../abstract.html">Project</a>
+            <a href="../testimony.html">Testimony</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Visualizations
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="./animation.html">Animation</a>
+                    <a href="./images.html">Image Gallery</a>
+                    <a href="./map.html">Map</a>
+                </div>
+            </div>
+            <a href="../bibliography.html">Learn More</a>
+        </div>
+    </header>
+
+    <main id="map-block">
+        <h1>Map of the Kraków Ghetto</h1>
+        <p><b>Click on the buttons below</b> to see the locations of key administrative offices and institutions inside the Kraków Ghetto. The red border reflects the boundaries of the ghetto during its first iteration in 1941.</p>
+        <div id="mapid"></div>
+        <script>
+            var mymap = L.map('mapid').setView([50.04555, 19.95163], 16);
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                maxZoom: 18,
+                id: 'mapbox.streets',
+                accessToken: 'pk.eyJ1IjoiY2hyaXN0aW5lbGl1ODE2IiwiYSI6ImNrMnA2ZWo4dzAxMTczY244a3I3bmJnMmkifQ.HxcIkuqMh91_Kv6lUhrmeg'
+            }).addTo(mymap);
+
+
+            var judenrat = L.marker([50.04480, 19.94994]).addTo(mymap)
+                .bindPopup('Judenrat');
+
+            var chospital = L.marker([50.04581, 19.95055]).addTo(mymap)
+                .bindPopup('Central Hospital');
+
+            var od = L.marker([50.04520, 19.95267]).addTo(mymap)
+                .bindPopup('Jewish Order Service (OD)');
+
+            var jss = L.marker([50.04577, 19.95153]).addTo(mymap)
+                .bindPopup('Jewish Social Self-Help Association (JSS)');
+
+            var roia = L.marker([50.04440, 19.95267]).addTo(mymap)
+                .bindPopup('Roia Rockowa Centre for Jewish Orphans');
+
+            var trade = L.marker([50.04553, 19.95477]).addTo(mymap)
+                .bindPopup('Trade Boarding School for Orphans');
+
+            var prison = L.marker([50.04447, 19.95506]).addTo(mymap)
+                .bindPopup('Auxilary Prison');
+
+            var stjoseph = L.marker([50.04330, 19.94989]).addTo(mymap)
+                .bindPopup("St. Joseph's Church")
+
+            var latlngs = [
+                [50.04586, 19.94823],
+                [50.04515, 19.94812],
+                [50.04471, 19.94859],
+                [50.04496, 19.94962],
+                [50.04377, 19.94978],
+                [50.04358, 19.95039],
+                [50.04317, 19.95056],
+                [50.04302, 19.95223],
+                [50.04282, 19.95226],
+                [50.04305, 19.95436],
+                [50.04293, 19.95641],
+                [50.04345, 19.95723],
+                [50.04297, 19.95930],
+                [50.04328, 19.95965],
+                [50.04415, 19.95775],
+                [50.04440, 19.95789],
+                [50.04489, 19.95736],
+                [50.04505, 19.95782],
+                [50.04735, 19.95756],
+                [50.04719, 19.95473],
+                [50.04780, 19.95440],
+                [50.04738, 19.95256],
+                [50.04692, 19.95272],
+                [50.04594, 19.94927]
+            ];
+            var polygon = L.polygon(latlngs, {
+                color: 'red'
+            }).addTo(mymap);
+
+
+            function showPopup(popup) {
+                popup.openOn(mymap);
+            }
+        </script>
+
+        <input class="button" type="button" onclick="judenrat.openPopup()" value="Judenrat">
+        <input class="button" type="button" onclick="chospital.openPopup()" value="Central Hospital">
+        <input class="button" type="button" onclick="od.openPopup()" value="Jewish Order Service (OD)">
+        <input class="button" type="button" onclick="jss.openPopup()" value="Jewish Social Self-Help Association (JSS)">
+        <input class="button" type="button" onclick="roia.openPopup()" value="Roia Rockowa Centre">
+        <input class="button" type="button" onclick="prison.openPopup()" value="Auxilary Prison">
+        <input class="button" type="button" onclick="trade.openPopup()" value="Trade Boarding School">
+        <input class="button" type="button" onclick="stjoseph.openPopup()" value="St. Joseph's Church">
+    </main>
+
+
+    <footer>
+        <ul id="footer-items">
+            <li>&copy; Christine Liu | 2019</li>
+        </ul>
+    </footer>
+
+</body></html>

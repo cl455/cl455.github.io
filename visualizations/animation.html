@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizing Spaces of Confinement</title>
+    <link href="../css/final.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/final.js"></script>
+</head>
+
+<body>
+    <header>
+         <div class="container">
+             <a href="../index.html"><img src="../images/top_banner.jpg" alt="screenshot of 3d krakow model" width=100%></a>
+            <div class="centered">Mapping and Visualizing Testimonies of Spaces of Confinement: <br>A Digital Analysis of the Kraków Ghetto</div>
+        </div>
+        <div class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="../abstract.html">Project</a>
+            <a href="../testimony.html">Testimony</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Visualizations
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="./animation.html">Animation</a>
+                    <a href="./images.html">Image Gallery</a>
+                    <a href="./map.html">Map</a>
+                </div>
+            </div>
+            <a href="../bibliography.html">Learn More</a>
+        </div>
+    </header>
+
+    <main id="landing-block">
+        <h1>Testimony Animation</h1>
+        <video width=100% controls controlsList="nodownload">
+            <source src="../video/Leyson_animation2.mov" type="video/mp4">
+        </video>
+        <ul>
+            <li> The 3D model of the ghetto is not an architectural model of the city, the buildings are intentionally left in block form and untextured. Representations of historical sites in virtual environments that are too realistic can be perceived as unconvincing. When there is insufficient data and the past is uncertain, photo realistic views can only pretend to represent truth.</li>
+            <li>The design of the avatars purposely bears no resemblance to the human form. The capsules have orientation, they are upright and there is clear verticality to signal to a bipedal human form without intricacies might otherwise be distract or fixate upon.</li>
+            <li>The terrain was made on <a href="https://www.world-creator.com/" target="_blank">World Creator</a> and the terrain color is from a hillshade (3D representation of ground surface). Not grayscale to provide some contrast from the buildings. </li>
+            <li>The animation’s second scene is intended to convey a sense of randomization. As previously explored, the testimonies describe moments of place making without specificity in location. The visualizations are not definitive in depicting where events actually occurred, so I worked with the notion that they should convey ambiguity through visual cues. Pushing the boundaries of what can be communicated about subjective experience through 3D models means forgoing reliance on textual context as much as possible.</li>
+        </ul>
+    </main>
+
+
+    <footer>
+        <ul id="footer-items">
+            <li>&copy; Christine Liu | 2019</li>
+        </ul>
+    </footer>
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
+</body></html>

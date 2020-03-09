@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizing Spaces of Confinement</title>
+    <link href="../css/final.css" type="text/css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/final.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script src="../js/galleria.min.js"></script>
+    <link href="../css/galleria.classic.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+         <div class="container">
+             <a href="../index.html"><img src="../images/top_banner.jpg" alt="screenshot of 3d krakow model" width=100%></a>
+            <div class="centered">Mapping and Visualizing Testimonies of Spaces of Confinement: <br>A Digital Analysis of the Kraków Ghetto</div>
+        </div>
+        <div class="navbar">
+            <a href="../index.html">Home</a>
+            <a href="../abstract.html">Project</a>
+            <a href="../testimony.html">Testimony</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="myFunction()">Visualizations
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="./animation.html">Animation</a>
+                    <a href="./images.html">Image Gallery</a>
+                    <a href="./map.html">Map</a>
+                </div>
+            </div>
+            <a href="../bibliography.html">Learn More</a>
+        </div>
+    </header>
+
+    <main id="landing-block">
+        <h1>Maps and Visualizations</h1>
+        <p><b>Click the <i>i</i> on the upper left corner for captions or click on in image for a closer look.</b> The following images show the ways 2D and 3D models of the Kraków Ghetto can be iteratively queried to engage with spatial questions about the ghetto. A survivor mentions the looming presence of St. Joseph's Church, from where in the ghetto was the stop of the spire actually visible? Residents created shops and businesses inside the ghetto, were these establishments concentrated in certain blocks or spread throughout? The pliable landscape of a digital environment creates room to look at the form of a place with open ended questions without the restrictions of a more traditional approach of merely what happened and to whom. Through databases and digital tools, material of disparate scale and mediums can be represented together.  </p>
+        <div class="galleria">
+            <img src="../images/ArcGIS_BuildingStatus.PNG" alt="image of different building zones in the ghetto" data-title="Buildings in the Kraków Ghetto." data-description="Areas where my data are more accurate.">
+            <img src="../images/ArcGIS_StJosephViewshed_over.PNG" alt="2d viewshed of the church" data-title="2D Viewshed of St. Joseph's Church at a height of 70m." data-description="">
+            <img src="../images/ArcGIS_StJosephViewshed_street2.PNG" alt="3d analysis of sighline of the church" data-title="3D sightline of St. Joseph’s Church with 2D viewshed analysis layered over the base map." data-description="">
+            <img src="../images/ArcOnline_Roofforms.png" alt="screenshot of 3d buildings in the ghetto from arcgis" data-title="Screenshot of 3D buildings with roof forms extracted from LIDAR." data-description="">
+            <img src="../images/Map_Gazeta1.PNG" alt="map with points plotted of businesses in the ghetto in 1941" data-title="Points from addresses listed in advertisements from 1941 issues of Gazeta Żydowska (Jewish Gazette)." data-description="">
+            <img src="../images/Billboard_LimanowskiegoEnd.PNG" alt="historic image juxtaposed with 3d buildings in the ghetto" data-title="View from the southeastern border of the ghetto at one end of Limanowskiego Street." data-description="">
+        </div>
+
+    </main>
+
+
+    <footer>
+        <ul id="footer-items">
+            <li>&copy; Christine Liu | 2019</li>
+        </ul>
+    </footer>
+    <script>
+        (function() {
+            Galleria.loadTheme('../js/galleria.classic.min.js');
+            Galleria.run('.galleria');
+            Galleria.configure({
+    lightbox: true
+});
+        }());
+    </script>
+</body></html>
