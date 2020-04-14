@@ -113,6 +113,12 @@ a:hover {
         font-size: 1.1rem;
         margin: 0 auto 3% auto;
     }
+    
+    #resume {
+        width: 90%;
+        font-size: 1.1rem;
+        margin: 0 auto 3% auto;
+    }
 
     #resume-block {
         display: grid;
@@ -159,7 +165,7 @@ a:hover {
     }
 
     .job-place {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         color: #2f4a9f;
         font-weight: bold;
     }
@@ -216,6 +222,7 @@ a:hover {
     }
 
     .lab_number {
+        font-size: 1.3rem;
         grid-area: number;
         margin-bottom: 0px;
         margin-top: 5px;
