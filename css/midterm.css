@@ -24,7 +24,7 @@ nav {
 
 
 #nav-links li {
-    padding: 10px;
+    padding: 10px;  
 }
 
 #christine {
@@ -57,20 +57,20 @@ nav {
 
 #nav-links a:hover {
     text-decoration: underline;
-    color: #d9526b;
+    color: #1B7F27;
 }
 
 a:link {
-    color: #d9526b;
+    color: #2f4a9f;
 }
 
 
 a:visited {
-    color: #d9526b;
+    color: #2f4a9f;
 }
 
 a:hover {
-    color: #2f4a9f;
+    color: #1B7F27;
 }
 
 @media screen and (min-width: 320px) {
@@ -85,11 +85,12 @@ a:hover {
     
      #landing-block {
         width: 90%;
+         display: grid;
         margin: 0 auto;
     }
 
     #landing-image {
-        width: 100%;
+        width: 80%;
         display: grid;
         margin: 0 auto;
     }
@@ -184,11 +185,6 @@ a:hover {
         margin-bottom: 0px;
     }
 
-    #landing-image {
-        width: 100%;
-        display: grid;
-        margin: 0 auto;
-    }
 
     #labs-block {
         display: grid;
@@ -256,13 +252,28 @@ a:hover {
         font-size: 1.5rem;
     }
 
-    #landing-text {
+    #landing-block {
         display: grid;
+        grid-template-columns: 30% 60%;
+            grid-column-gap: 2%;
+        
+    }
+    
+    #landing-image {
+           width: 100%;
+/*        display: grid;*/
+/*        margin: 0 auto;*/
+    }
+    
+    #landing-text {
+/*        display: grid;*/
         max-width: 95%;
         margin: 0 auto;
-        grid-template-columns: 45% 55%;
-        grid-column-gap: 10px;
-        grid-template-areas:
+        margin-top: 0px;
+        margin-left: 0px;
+/*        grid-template-columns: 45% 55%;*/
+/*        grid-column-gap: 10px;*/
+/*        grid-template-areas:*/
     }
 
 
