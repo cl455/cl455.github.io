@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lora|Raleway&display=swap');
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 main {
     font-family: "Raleway", sans-serif;
 }
