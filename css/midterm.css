@@ -95,7 +95,7 @@ a:hover {
     #landing-image {
         width: 80%;
         display: grid;
-        margin: 0 auto;
+        margin: 10px auto;
     }
     
      #landing-text h1 {
