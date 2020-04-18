@@ -166,6 +166,7 @@ a:hover {
     .job_description {
         margin: 1% 0;
         font-size: 1.1rem;
+        margin-bottom: 30px;
     }
 
     .job-place {
@@ -178,7 +179,7 @@ a:hover {
         list-style-type: none;
         font-style: italic;
         font-size: 1.1rem;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
     }
 
     .job-title {
