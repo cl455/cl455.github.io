@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto&display=swap');
 
-
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 main {
     font-family: "Roboto", sans-serif;
